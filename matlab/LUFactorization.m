@@ -11,6 +11,7 @@ for i=1:n-1
         end
     end
 end
-L = tril(A,-1);
+L = tril(A);
+L(1:n+1:end) = ones(n,1);
 U = triu(A);
 end
