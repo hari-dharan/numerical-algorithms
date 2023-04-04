@@ -1,6 +1,7 @@
 function [L,U] = LUFactorization(A)
-%LUFACTORIZATION Summary of this function goes here
-%   Detailed explanation goes here
+%LUFACTORIZATION Return LU factors of given (nxn) square matrix A.
+%   Same algorithm as Gaussian Elimination except the multipliers are
+%   stored.
 n = size(A,1);
 for i=1:n-1
     for j=i+1:n
