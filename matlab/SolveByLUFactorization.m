@@ -1,6 +1,6 @@
 function x = SolveByLUFactorization(L, U, b)
-%SOLVEBYLUFACTORIZATION Summary of this function goes here
-%   Detailed explanation goes here
+%SOLVEBYLUFACTORIZATION Solve linear systems of equations Ax=b, where A=LU.
+%   Solved using forward substitution and backward substitution given L,U,b.
 n = size(L,1);
 
 % Solve Lb' = b using forward substitution
