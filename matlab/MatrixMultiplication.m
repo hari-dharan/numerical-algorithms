@@ -2,6 +2,8 @@ function C = MatrixMultiplication(A, B)
 %MATRIXMULTIPLICATION Product of two matrices under the usual matrix multiplication.
 %   C = A * B where C is (mxp), A is (mxn) and B is (nxp).
 %   Naive algorithm of 3 for loops to compute each entry in output matrix.
+%   Number of multiplications: mnp
+%   Number of additions: m(n-1)p
 m = size(A, 1);
 n = size(A, 2);
 p = size(B, 2);
