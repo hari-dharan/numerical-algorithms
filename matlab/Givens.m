@@ -1,10 +1,8 @@
-function y = Givens(x, i, j)
-%GIVENS Use Givens rotation to eliminate one entry of a vector.
+function G = Givens(x, i, j)
+%GIVENS Return Givens rotation matrix to eliminate one entry of a vector.
 %   x: input column vector.
 %   i: coordinate of the entry used to eliminate
-%   j: coordinate of the entry to eliminate
-%   The Givens rotation matrix is not explicitly formed. 
-%   The output is the vector with the j-th entry eliminated.
+%   j: coordinate of the entry to eliminate 
 a = x(i);
 b = x(j);
 
@@ -23,8 +21,10 @@ else
     end
 end
 
-y = x;
-y(i) = c*a + s*b;
-y(j) = -s*a + c*b;
+G = eye(length(x));
+G(i,i) = c;
+G(j,j) = c;
+G(i,j) = s;
+G(j,i) = -s;
 
 end
