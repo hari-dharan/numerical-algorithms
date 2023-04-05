@@ -13,3 +13,4 @@ if s == 0
 else
     HH = [eye(s), zeros(s,L); zeros(L,s), H];
 end
+end
