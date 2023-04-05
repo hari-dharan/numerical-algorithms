@@ -1,6 +1,5 @@
 function hess = UpperHessenbergByHouseholder(A)
-%UPPERHESSENBERGBYHOUSEHOLDER Summary of this function goes here
-%   Detailed explanation goes here
+%UPPERHESSENBERGBYHOUSEHOLDER Create an upper hessenberg matrix.
 n = size(A,1);
 hess = A(2:n, 1:n-1);
 n_hess = size(hess,1);
